@@ -1,3 +1,18 @@
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCEHv-uL7GYEzF6jBy2P5lzSOMbyd-Q5Ps",
+    authDomain: "jobby-landing.firebaseapp.com",
+    databaseURL: "https://jobby-landing-default-rtdb.firebaseio.com",
+    projectId: "jobby-landing",
+    storageBucket: "jobby-landing.firebasestorage.app",
+    messagingSenderId: "983795092075",
+    appId: "1:983795092075:web:74f0427ef2ec58df137f2e",
+    measurementId: "G-N6CY4MVHFK"
+};
+
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+
 // Navigation between sections
 function showSection(sectionId) {
     // Hide all sections
@@ -21,126 +36,126 @@ function searchServices(event) {
     console.log(servicio, ubicacion, presupuesto)
 
     const mockResults = [
-    {
-        name: 'José García',
-        service: 'Técnico de Aire Acondicionado',
-        description: 'Especialista en instalación, reparación y mantenimiento de sistemas de aire acondicionado.',
-        rating: 4.8,
-        price: "$30/hora",
-        location: 'Guayaquil',
-        image: 'https://images.pexels.com/photos/30257405/pexels-photo-30257405.jpeg',
-        experience: 5,
-        reviews: 45,
-        category: 'tecnicos'
-    },
-    {
-        name: 'Luis Zambrano',
-        service: 'Electricista',
-        description: 'Instalación, reparación y mantenimiento de sistemas eléctricos residenciales e industriales.',
-        rating: 4.6,
-        price: "$28/hora",
-        location: 'Daule',
-        image: 'https://images.pexels.com/photos/29284315/pexels-photo-29284315.jpeg',
-        experience: 4,
-        reviews: 32,
-        category: 'hogar'
-    },
-    {
-        name: 'Mía Sánchez',
-        service: 'Pintora',
-        description: 'Pintura de interiores y exteriores, acabados decorativos y mantenimiento de superficies.',
-        rating: 4.7,
-        price: "$25/hora",
-        location: 'Milagro',
-        image: 'https://images.pexels.com/photos/10641053/pexels-photo-10641053.jpeg',
-        experience: 3,
-        reviews: 21,
-        category: 'hogar'
-    },
-    {
-        name: 'Santiago Vera',
-        service: 'Técnico en Computación',
-        description: 'Soluciona problemas de hardware y software, instalación y mantenimiento de computadoras.',
-        rating: 4.9,
-        price: "$35/hora",
-        location: 'Samborondón',
-        image: 'https://images.pexels.com/photos/31610843/pexels-photo-31610843.jpeg',
-        experience: 6,
-        reviews: 60,
-        category: 'tecnologia'
-    },
-    {
-        name: 'Ashley López',
-        service: 'Diseñadora Gráfica',
-        description: 'Especialista en identidad visual, branding y diseño publicitario.',
-        rating: 4.5,
-        price: "$40/hora",
-        location: 'Playas',
-        image: 'https://images.pexels.com/photos/31942700/pexels-photo-31942700.jpeg',
-        experience: 4,
-        reviews: 33,
-        category: 'diseno'
-    },
-    {
-        name: 'Mathias Alvarado',
-        service: 'Técnico en Celulares',
-        description: 'Reparación y mantenimiento de teléfonos móviles y tablets.',
-        rating: 4.7,
-        price: "$30/hora",
-        location: 'Ceibos',
-        image: 'https://images.pexels.com/photos/29047759/pexels-photo-29047759.jpeg',
-        experience: 3,
-        reviews: 19,
-        category: 'tecnologia'
-    },
-    {
-        name: 'Doménica González',
-        service: 'Tutora de Matemáticas',
-        description: 'Clases personalizadas para estudiantes de primaria y secundaria.',
-        rating: 5.0,
-        price: "$20/hora",
-        location: 'Durán',
-        image: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg',
-        experience: 2,
-        reviews: 12,
-        category: 'educacion'
-    },
-    {
-        name: 'Danna Moran',
-        service: 'Cerrajera',
-        description: 'Apertura de cerraduras, cambio de llaves y sistemas de seguridad.',
-        rating: 4.8,
-        price: "$35/hora",
-        location: 'Naranjal',
-        image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg',
-        experience: 5,
-        reviews: 27,
-        category: 'hogar'
-    },
-    {
-        name: 'Ángel Castro',
-        service: 'Gasfitero',
-        description: 'Especialista en instalaciones de gas y mantenimiento de sistemas de gas domiciliario.',
-        rating: 4.6,
-        price: "$32/hora",
-        location: 'Yaguachi',
-        image: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg',
-        experience: 5,
-        reviews: 18,
-        category: 'hogar'
-    },
-    {
-        name: 'Emily Vera',
-        service: 'Diseñadora UX/UI',
-        description: 'Diseño de interfaces atractivas y experiencia de usuario efectiva.',
-        rating: 4.9,
-        price: "$50/hora",
-        location: 'Balao',
-        image: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg',
-        experience: 6,
-        reviews: 41,
-        category: 'diseno'
-    }
+        {
+            name: 'José García',
+            service: 'Técnico de Aire Acondicionado',
+            description: 'Especialista en instalación, reparación y mantenimiento de sistemas de aire acondicionado.',
+            rating: 4.8,
+            price: "$30/hora",
+            location: 'Guayaquil',
+            image: 'https://images.pexels.com/photos/30257405/pexels-photo-30257405.jpeg',
+            experience: 5,
+            reviews: 45,
+            category: 'tecnicos'
+        },
+        {
+            name: 'Luis Zambrano',
+            service: 'Electricista',
+            description: 'Instalación, reparación y mantenimiento de sistemas eléctricos residenciales e industriales.',
+            rating: 4.6,
+            price: "$28/hora",
+            location: 'Daule',
+            image: 'https://images.pexels.com/photos/29284315/pexels-photo-29284315.jpeg',
+            experience: 4,
+            reviews: 32,
+            category: 'hogar'
+        },
+        {
+            name: 'Mía Sánchez',
+            service: 'Pintora',
+            description: 'Pintura de interiores y exteriores, acabados decorativos y mantenimiento de superficies.',
+            rating: 4.7,
+            price: "$25/hora",
+            location: 'Milagro',
+            image: 'https://images.pexels.com/photos/10641053/pexels-photo-10641053.jpeg',
+            experience: 3,
+            reviews: 21,
+            category: 'hogar'
+        },
+        {
+            name: 'Santiago Vera',
+            service: 'Técnico en Computación',
+            description: 'Soluciona problemas de hardware y software, instalación y mantenimiento de computadoras.',
+            rating: 4.9,
+            price: "$35/hora",
+            location: 'Samborondón',
+            image: 'https://images.pexels.com/photos/31610843/pexels-photo-31610843.jpeg',
+            experience: 6,
+            reviews: 60,
+            category: 'tecnologia'
+        },
+        {
+            name: 'Ashley López',
+            service: 'Diseñadora Gráfica',
+            description: 'Especialista en identidad visual, branding y diseño publicitario.',
+            rating: 4.5,
+            price: "$40/hora",
+            location: 'Playas',
+            image: 'https://images.pexels.com/photos/31942700/pexels-photo-31942700.jpeg',
+            experience: 4,
+            reviews: 33,
+            category: 'diseno'
+        },
+        {
+            name: 'Mathias Alvarado',
+            service: 'Técnico en Celulares',
+            description: 'Reparación y mantenimiento de teléfonos móviles y tablets.',
+            rating: 4.7,
+            price: "$30/hora",
+            location: 'Ceibos',
+            image: 'https://images.pexels.com/photos/29047759/pexels-photo-29047759.jpeg',
+            experience: 3,
+            reviews: 19,
+            category: 'tecnologia'
+        },
+        {
+            name: 'Doménica González',
+            service: 'Tutora de Matemáticas',
+            description: 'Clases personalizadas para estudiantes de primaria y secundaria.',
+            rating: 5.0,
+            price: "$20/hora",
+            location: 'Durán',
+            image: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg',
+            experience: 2,
+            reviews: 12,
+            category: 'educacion'
+        },
+        {
+            name: 'Danna Moran',
+            service: 'Cerrajera',
+            description: 'Apertura de cerraduras, cambio de llaves y sistemas de seguridad.',
+            rating: 4.8,
+            price: "$35/hora",
+            location: 'Naranjal',
+            image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg',
+            experience: 5,
+            reviews: 27,
+            category: 'hogar'
+        },
+        {
+            name: 'Ángel Castro',
+            service: 'Gasfitero',
+            description: 'Especialista en instalaciones de gas y mantenimiento de sistemas de gas domiciliario.',
+            rating: 4.6,
+            price: "$32/hora",
+            location: 'Yaguachi',
+            image: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg',
+            experience: 5,
+            reviews: 18,
+            category: 'hogar'
+        },
+        {
+            name: 'Emily Vera',
+            service: 'Diseñadora UX/UI',
+            description: 'Diseño de interfaces atractivas y experiencia de usuario efectiva.',
+            rating: 4.9,
+            price: "$50/hora",
+            location: 'Balao',
+            image: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg',
+            experience: 6,
+            reviews: 41,
+            category: 'diseno'
+        }
     ];
 
 
@@ -208,12 +223,23 @@ function contactWorker(workerName) {
 // Contact form submission
 function submitApplication(event) {
     event.preventDefault();
+
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
 
-    // Mock submission
-    alert('¡Gracias por tu interés! Hemos recibido tu solicitud. Nuestro equipo la revisará y te contactaremos en las próximas 24-48 horas.');
-    event.target.reset();
+    // Agregar timestamp
+    data.timestamp = new Date().toISOString();
+
+    // Enviar a Firebase Realtime Database
+    firebase.database().ref('solicitudes').push(data)
+        .then(() => {
+            alert('¡Gracias por tu interés! Hemos recibido tu solicitud y la almacenamos en Firebase.');
+            event.target.reset();
+        })
+        .catch(error => {
+            console.error("Error al enviar los datos a Firebase:", error);
+            alert("Hubo un error al enviar tu solicitud. Por favor, intenta nuevamente.");
+        });
 }
 
 // Plan selection
