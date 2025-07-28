@@ -226,35 +226,30 @@ nav {
 }
 
 .companies-scroll {
-    overflow: hidden; /* <- importante */
-    padding: 20px 0;
+    overflow: hidden;
     position: relative;
-}
-
-.companies-scroll::-webkit-scrollbar {
-    display: none;
 }
 
 .companies-container {
     display: flex;
-    gap: 3rem;
-    padding: 0 2rem;
-    width: max-content;
     animation: scroll-left 30s linear infinite;
 }
 
 @keyframes scroll-left {
     0% {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
+
     100% {
         transform: translateX(-50%);
     }
 }
 
 .company-card {
-    min-width: 200px;
+    flex: 0 0 auto;
+    width: 200px;
     height: 120px;
+    margin-right: 3rem;
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     border-radius: 15px;
     display: flex;
@@ -273,6 +268,7 @@ nav {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     border-color: #667eea;
 }
+
 
 /* Services Section */
 .services-section {
@@ -408,7 +404,7 @@ nav {
     font-size: 1rem;
 }
 
-.contact-form select option{
+.contact-form select option {
     color: black;
 }
 
@@ -431,6 +427,26 @@ footer {
     color: white;
     padding: 3rem 0 1rem;
     text-align: center;
+}
+
+.insta-logo {
+    width: 8rem;
+    height: 8.5rem;
+}
+
+.inst {
+    color: white;
+    text-decoration: none;
+}
+
+p.inst {
+    position: relative;
+    top: -20px;
+}
+
+a.inst {
+    position: relative;
+    top: -20px;
 }
 
 .footer-content {
