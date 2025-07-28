@@ -115,7 +115,7 @@
                     <form class="search-form" onsubmit="searchServices(event)">
                         <div class="form-group">
                             <label for="servicio">Tipo de Servicio</label>
-                            <select id="servicio" required>
+                            <select id="servicio">
                                 <option value="">Selecciona un servicio</option>
                                 <option value="tecnicos">Servicios Técnicos</option>
                                 <option value="diseno">Diseño y Creatividad</option>
@@ -127,7 +127,19 @@
                         </div>
                         <div class="form-group">
                             <label for="ubicacion">Ubicación</label>
-                            <input type="text" id="ubicacion" placeholder="Ej: Guayaquil, Guayas" required>
+                            <select id="ubicacion">
+                                <option value="">Selecciona una ubicación</option>
+                                <option value="Guayaquil">Guayaquil</option>
+                                <option value="Daule">Daule</option>
+                                <option value="Milagro">Milagro</option>
+                                <option value="Samborondón">Samborondón</option>
+                                <option value="Playas">Playas</option>
+                                <option value="Ceibos">Ceibos</option>
+                                <option value="Durán">Durán</option>
+                                <option value="Naranjal">Naranjal</option>
+                                <option value="Yaguachi">Yaguachi</option>
+                                <option value="Balao">Balao</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="presupuesto">Presupuesto (USD)</label>

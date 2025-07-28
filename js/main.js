@@ -21,52 +21,140 @@ function searchServices(event) {
     console.log(servicio, ubicacion, presupuesto)
 
     const mockResults = [
-        {
-            name: "Carlos Mendoza",
-            service: "Electricista",
-            category: "tecnicos",
-            rating: 4.8,
-            price: "$25/hora",
-            location: "Guayaquil",
-            image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg",
-            experience: "5 años",
-            reviews: 127,
-        },
-        {
-            name: "María González",
-            service: "Diseñadora Gráfica",
-            category: "diseno",
-            rating: 4.9,
-            price: "$30/hora",
-            location: "Quito",
-            image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg",
-            experience: "8 años",
-            reviews: 89
-        },
-        {
-            name: "Juan Pérez",
-            service: "Desarrollador Web",
-            category: "tecnologia",
-            rating: 4.7,
-            price: "$45/hora",
-            location: "Cuenca",
-            image: "https://images.pexels.com/photos/29284315/pexels-photo-29284315.jpeg",
-            experience: "6 años",
-            reviews: 156
-        }
+    {
+        name: 'José García',
+        service: 'Técnico de Aire Acondicionado',
+        description: 'Especialista en instalación, reparación y mantenimiento de sistemas de aire acondicionado.',
+        rating: 4.8,
+        price: "$30/hora",
+        location: 'Guayaquil',
+        image: 'https://images.pexels.com/photos/30257405/pexels-photo-30257405.jpeg',
+        experience: 5,
+        reviews: 45,
+        category: 'tecnicos'
+    },
+    {
+        name: 'Luis Zambrano',
+        service: 'Electricista',
+        description: 'Instalación, reparación y mantenimiento de sistemas eléctricos residenciales e industriales.',
+        rating: 4.6,
+        price: "$28/hora",
+        location: 'Daule',
+        image: 'https://images.pexels.com/photos/29284315/pexels-photo-29284315.jpeg',
+        experience: 4,
+        reviews: 32,
+        category: 'hogar'
+    },
+    {
+        name: 'Mía Sánchez',
+        service: 'Pintora',
+        description: 'Pintura de interiores y exteriores, acabados decorativos y mantenimiento de superficies.',
+        rating: 4.7,
+        price: "$25/hora",
+        location: 'Milagro',
+        image: 'https://images.pexels.com/photos/10641053/pexels-photo-10641053.jpeg',
+        experience: 3,
+        reviews: 21,
+        category: 'hogar'
+    },
+    {
+        name: 'Santiago Vera',
+        service: 'Técnico en Computación',
+        description: 'Soluciona problemas de hardware y software, instalación y mantenimiento de computadoras.',
+        rating: 4.9,
+        price: "$35/hora",
+        location: 'Samborondón',
+        image: 'https://images.pexels.com/photos/31610843/pexels-photo-31610843.jpeg',
+        experience: 6,
+        reviews: 60,
+        category: 'tecnologia'
+    },
+    {
+        name: 'Ashley López',
+        service: 'Diseñadora Gráfica',
+        description: 'Especialista en identidad visual, branding y diseño publicitario.',
+        rating: 4.5,
+        price: "$40/hora",
+        location: 'Playas',
+        image: 'https://images.pexels.com/photos/31942700/pexels-photo-31942700.jpeg',
+        experience: 4,
+        reviews: 33,
+        category: 'diseno'
+    },
+    {
+        name: 'Mathias Alvarado',
+        service: 'Técnico en Celulares',
+        description: 'Reparación y mantenimiento de teléfonos móviles y tablets.',
+        rating: 4.7,
+        price: "$30/hora",
+        location: 'Ceibos',
+        image: 'https://images.pexels.com/photos/29047759/pexels-photo-29047759.jpeg',
+        experience: 3,
+        reviews: 19,
+        category: 'tecnologia'
+    },
+    {
+        name: 'Doménica González',
+        service: 'Tutora de Matemáticas',
+        description: 'Clases personalizadas para estudiantes de primaria y secundaria.',
+        rating: 5.0,
+        price: "$20/hora",
+        location: 'Durán',
+        image: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg',
+        experience: 2,
+        reviews: 12,
+        category: 'educacion'
+    },
+    {
+        name: 'Danna Moran',
+        service: 'Cerrajera',
+        description: 'Apertura de cerraduras, cambio de llaves y sistemas de seguridad.',
+        rating: 4.8,
+        price: "$35/hora",
+        location: 'Naranjal',
+        image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg',
+        experience: 5,
+        reviews: 27,
+        category: 'hogar'
+    },
+    {
+        name: 'Ángel Castro',
+        service: 'Gasfitero',
+        description: 'Especialista en instalaciones de gas y mantenimiento de sistemas de gas domiciliario.',
+        rating: 4.6,
+        price: "$32/hora",
+        location: 'Yaguachi',
+        image: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg',
+        experience: 5,
+        reviews: 18,
+        category: 'hogar'
+    },
+    {
+        name: 'Emily Vera',
+        service: 'Diseñadora UX/UI',
+        description: 'Diseño de interfaces atractivas y experiencia de usuario efectiva.',
+        rating: 4.9,
+        price: "$50/hora",
+        location: 'Balao',
+        image: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg',
+        experience: 6,
+        reviews: 41,
+        category: 'diseno'
+    }
     ];
 
+
     const filteredResults = mockResults.filter(item => {
-        const itemService = item.category.toLowerCase();
-        const itemLocation = item.location.toLowerCase();
-        const itemPrice = parseInt(item.price.replace(/[^0-9]/g, ''));
-        console.log('filter', itemService, itemLocation, itemPrice)
+        const itemCategoria = item.category.toLowerCase();
+        const itemUbicacion = item.location.toLowerCase();
+        const itemPrecio = parseInt(item.price.replace(/[^0-9]/g, ''));
 
-        const matchServicio = servicio === '' || itemService === servicio;
-        const matchUbicacion = ubicacion === '' || itemLocation.includes(ubicacion);
-        const matchPresupuesto = isNaN(presupuesto) || itemPrice <= presupuesto;
+        // Evaluar si cada filtro coincide (o si está vacío)
+        const coincideCategoria = servicio === '' || itemCategoria === servicio;
+        const coincideUbicacion = ubicacion === '' || itemUbicacion.includes(ubicacion);
+        const coincidePresupuesto = isNaN(presupuesto) || itemPrecio <= presupuesto;
 
-        return matchServicio && matchUbicacion && matchPresupuesto;
+        return coincideCategoria && coincideUbicacion && coincidePresupuesto;
     });
 
     displaySearchResults(filteredResults);
@@ -96,7 +184,7 @@ function displaySearchResults(results) {
                             </div>
                             <div style="margin-bottom: 1rem;">
                                 <p style="margin: 0.5rem 0; color: #666;"><strong>📍</strong> ${result.location}</p>
-                                <p style="margin: 0.5rem 0; color: #666;"><strong>💼</strong> ${result.experience} de experiencia</p>
+                                <p style="margin: 0.5rem 0; color: #666;"><strong>💼</strong> ${result.description}</p>
                                 <p style="margin: 0.5rem 0; color: #667eea; font-size: 1.2rem; font-weight: 700;">${result.price}</p>
                             </div>
                             <button onclick="contactWorker('${result.name}')" 

@@ -303,7 +303,9 @@ nav {
 }
 
 .service-icon {
-    font-size: 3rem;
+    width: 135px;
+    font-size: 6rem;
+    margin: 0 auto;
     margin-bottom: 1rem;
 }
 
