@@ -58,7 +58,7 @@ function searchServices(event) {
             image: 'https://images.pexels.com/photos/29284315/pexels-photo-29284315.jpeg',
             experience: 4,
             reviews: 32,
-            category: 'hogar'
+            category: 'tecnicos'
         },
         {
             name: 'Mía Sánchez',
